@@ -2,856 +2,834 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TechWorth | Smart Tech Buying Guides & Smartphone Advice</title>
 
-    <meta name="description" content="TechWorth helps you make smarter smartphone buying decisions with practical comparisons, buying guides, price advice and technology insights.">
+    <meta
+        name="description"
+        content="TechWorth helps you make smarter smartphone buying decisions with practical comparisons, price guides, sale tips and easy-to-understand tech advice."
+    >
 
-    <meta name="keywords" content="smartphone buying guide India, best phones, iPhone comparison, Android phones, phone deals, tech buying advice">
+    <meta
+        name="keywords"
+        content="smartphone buying guide, best phones in India, iPhone comparison, Android phones, phone deals, smartphone reviews, tech buying advice"
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://ashwiniveltvh.github.io/techworth-blog/"
+    >
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="TechWorth | Smart Tech Buying Guides & Smartphone Advice"
+    >
+
+    <meta
+        property="og:description"
+        content="Practical smartphone comparisons, buying guides, sale tips and tech advice to help you choose what is actually worth your money."
+    >
+
+    <meta
+        property="og:url"
+        content="https://ashwiniveltvh.github.io/techworth-blog/"
+    >
+
+    <meta property="og:site_name" content="TechWorth">
+
+    <!-- Twitter / social sharing -->
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="TechWorth | Smart Tech Buying Guides & Smartphone Advice"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Practical smartphone comparisons, buying guides, sale tips and tech advice."
+    >
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Homepage-only visual styling -->
     <style>
+        /* Homepage-only visual improvements */
 
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 330px;
-        }
-
-        .phone-showcase {
-            width: 230px;
-            height: 390px;
-            border-radius: 34px;
-            background: #111827;
-            padding: 9px;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
-            transform: rotate(5deg);
+        .hero {
             position: relative;
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            border-radius: 27px;
-            background:
-                radial-gradient(circle at 30% 25%, #8b7cff 0, transparent 28%),
-                radial-gradient(circle at 75% 70%, #4f46e5 0, transparent 32%),
-                linear-gradient(145deg, #111827, #312e81);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 28px 22px;
-            box-sizing: border-box;
-            color: white;
             overflow: hidden;
         }
 
-        .phone-notch {
-            width: 75px;
-            height: 20px;
-            background: #111827;
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(99, 91, 255, 0.08);
+            top: -120px;
+            right: -80px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(99, 91, 255, 0.06);
+            bottom: -100px;
+            left: -70px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .phone-visual {
+            width: 190px;
+            height: 360px;
+            margin: 35px auto 0;
+            border: 8px solid #1c1c1c;
+            border-radius: 32px;
+            background: linear-gradient(145deg, #f7f7ff, #e9e8ff);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-visual::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 18px;
             border-radius: 20px;
-            margin: -17px auto 0;
+            background: #111;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .phone-label {
-            font-size: 13px;
-            opacity: 0.75;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .phone-title {
-            font-size: 29px;
-            font-weight: 800;
-            line-height: 1.05;
-            margin-top: 12px;
-        }
-
-        .phone-price {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .phone-feature-row {
+        .phone-screen {
+            height: 100%;
             display: flex;
-            gap: 7px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 18px;
+            text-align: center;
         }
 
-        .phone-feature {
-            font-size: 11px;
-            padding: 6px 9px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.15);
+        .phone-screen span {
+            font-size: 42px;
+            margin-bottom: 12px;
         }
 
-        .hero-note {
-            margin-top: 18px;
-            font-size: 14px;
-            opacity: 0.75;
+        .phone-screen strong {
+            font-size: 18px;
+            color: #222;
         }
 
-        .article-card {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .phone-screen small {
+            margin-top: 8px;
+            color: #666;
+            line-height: 1.4;
         }
 
-        .article-card:hover {
-            transform: translateY(-5px);
+        .search-box {
+            max-width: 650px;
+            margin: 35px auto 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #e3e3e3;
+            border-radius: 14px;
+            padding: 14px 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
         }
 
-        .quick-link {
+        .search-box span {
+            font-size: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        .search-box input::placeholder {
+            color: #888;
+        }
+
+        .home-intro {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .article-card a {
             text-decoration: none;
             color: inherit;
         }
 
-        .quick-link .category-card {
-            height: 100%;
+        .article-card a:hover h3 {
+            color: #635bff;
         }
 
-        @media (max-width: 900px) {
+        .category-card {
+            text-decoration: none;
+            color: inherit;
+        }
 
-            .hero-visual {
-                min-height: 280px;
-                margin-top: 20px;
-            }
-
-            .phone-showcase {
-                width: 190px;
-                height: 325px;
-            }
-
+        .category-card:hover {
+            transform: translateY(-4px);
         }
 
         @media (max-width: 620px) {
-
-            .hero-visual {
-                min-height: 250px;
-            }
-
-            .phone-showcase {
+            .phone-visual {
                 width: 165px;
-                height: 285px;
+                height: 315px;
             }
 
-            .phone-title {
-                font-size: 23px;
+            .search-box {
+                margin-left: 10px;
+                margin-right: 10px;
             }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-<header class="site-header">
-
-    <div class="container nav-container">
-
-        <a href="index.html" class="logo">
-            Tech<span>Worth</span>
-        </a>
-
-        <button class="menu-btn" aria-label="Open menu">
-            ☰
-        </button>
-
-        <nav class="nav-links">
-
-            <a href="index.html" class="active">
-                Home
-            </a>
-
-            <a href="phones.html">
-                Phones
-            </a>
-
-            <a href="buying-guides.html">
-                Buying Guides
-            </a>
-
-            <a href="trending.html">
-                Trending
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-<main>
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="container hero-content">
-
-            <div>
-
-                <span class="section-label">
-                    SMARTER TECH BUYING
-                </span>
-
-                <h1>
-                    Before You Buy,
-                    <br>
-                    Know What's Worth It.
-                </h1>
-
-                <p>
-                    Smartphones change fast. Prices change even faster.
-                    TechWorth helps you understand what you're actually
-                    getting before you spend your money.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a href="phones.html" class="btn">
-                        Explore Phones
-                    </a>
-
-                    <a href="buying-guides.html" class="btn btn-secondary">
-                        Buying Guides
-                    </a>
-
-                </div>
-
-
-                <p class="hero-note">
-                    Practical comparisons • Buying advice • Tech insights
-                </p>
-
-            </div>
-
-
-            <!-- PHONE VISUAL -->
-
-            <div class="hero-visual">
-
-                <div class="phone-showcase">
-
-                    <div class="phone-screen">
-
-                        <div>
-
-                            <div class="phone-notch"></div>
-
-                            <div class="phone-label">
-                                TechWorth
-                            </div>
-
-                            <div class="phone-title">
-                                Think Before You Buy.
-                            </div>
-
-                        </div>
-
-
-                        <div>
-
-                            <div class="phone-feature-row">
-
-                                <span class="phone-feature">
-                                    Performance
-                                </span>
-
-                                <span class="phone-feature">
-                                    Camera
-                                </span>
-
-                                <span class="phone-feature">
-                                    Battery
-                                </span>
-
-                                <span class="phone-feature">
-                                    Value
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SEARCH -->
-
-    <section class="section search-section">
-
-        <div class="container">
-
-            <form class="search-box">
-
-                <span>
-                    🔎
-                </span>
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search smartphone guides..."
-                    aria-label="Search articles"
-                >
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- TRENDING -->
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    TRENDING NOW
-                </span>
-
-                <h2>
-                    What Are People Looking At?
-                </h2>
-
-                <p>
-                    Start with practical guides covering phones,
-                    comparisons and major shopping events.
-                </p>
-
-            </div>
-
-
-            <div class="article-grid">
-
-
-                <a href="article-iphone-2026.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        IPHONE
-                    </span>
-
-                    <h3>
-                        Is Buying an iPhone Worth It in 2026?
-                    </h3>
-
-                    <p>
-                        Look beyond the Apple logo and think about price,
-                        features, software and long-term value.
-                    </p>
-
-                    <span class="read-more">
-                        Read article →
-                    </span>
-
-                </a>
-
-
-                <a href="article-best-phones-40000.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        BUYING GUIDE
-                    </span>
-
-                    <h3>
-                        Best Phones Under ₹40,000 in 2026
-                    </h3>
-
-                    <p>
-                        Understand what you can realistically expect
-                        from the ₹40K smartphone segment.
-                    </p>
-
-                    <span class="read-more">
-                        Read guide →
-                    </span>
-
-                </a>
-
-
-                <a href="article-big-billion-days.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        SALES
-                    </span>
-
-                    <h3>
-                        Big Billion Days: How to Get Real Deals
-                    </h3>
-
-                    <p>
-                        Learn how to calculate the actual price instead
-                        of getting distracted by huge discount numbers.
-                    </p>
-
-                    <span class="read-more">
-                        Read guide →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURED GUIDES -->
-
-    <section class="section section-alt">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    FEATURED GUIDES
-                </span>
-
-                <h2>
-                    Start With These
-                </h2>
-
-                <p>
-                    A few practical guides to help you make sense of
-                    your next smartphone purchase.
-                </p>
-
-            </div>
-
-
-            <div class="article-grid">
-
-
-                <a href="article-iphone-vs-nord5.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        COMPARISON
-                    </span>
-
-                    <h3>
-                        iPhone 16 vs OnePlus Nord 5
-                    </h3>
-
-                    <p>
-                        A major price difference makes this an interesting
-                        comparison. Here's what actually changes.
-                    </p>
-
-                    <span class="read-more">
-                        Compare phones →
-                    </span>
-
-                </a>
-
-
-                <a href="article-best-phones-30000.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        UNDER ₹30K
-                    </span>
-
-                    <h3>
-                        Best Phones Under ₹30,000
-                    </h3>
-
-                    <p>
-                        Performance, cameras, battery and software —
-                        what should you prioritize at this budget?
-                    </p>
-
-                    <span class="read-more">
-                        Read guide →
-                    </span>
-
-                </a>
-
-
-                <a href="phones.html"
-                   class="article-card">
-
-                    <span class="card-category">
-                        SMARTPHONES
-                    </span>
-
-                    <h3>
-                        Understand What Matters
-                    </h3>
-
-                    <p>
-                        Learn why processor, camera, battery, display,
-                        software and value all matter differently.
-                    </p>
-
-                    <span class="read-more">
-                        Explore phone guides →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- QUICK CATEGORIES -->
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    EXPLORE
-                </span>
-
-                <h2>
-                    Find What You Need
-                </h2>
-
-            </div>
-
-
-            <div class="category-grid">
-
-
-                <a href="phones.html"
-                   class="quick-link">
-
-                    <div class="category-card">
-
-                        <div class="category-icon">
-                            📱
-                        </div>
-
-                        <h3>
-                            Smartphones
-                        </h3>
-
-                        <p>
-                            Phone guides, features and practical
-                            smartphone advice.
-                        </p>
-
-                        <span class="read-more">
-                            Explore →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <a href="buying-guides.html"
-                   class="quick-link">
-
-                    <div class="category-card">
-
-                        <div class="category-icon">
-                            💰
-                        </div>
-
-                        <h3>
-                            Buying Guides
-                        </h3>
-
-                        <p>
-                            Budget guides and advice for choosing
-                            your next device.
-                        </p>
-
-                        <span class="read-more">
-                            Explore →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <a href="trending.html"
-                   class="quick-link">
-
-                    <div class="category-card">
-
-                        <div class="category-icon">
-                            🔥
-                        </div>
-
-                        <h3>
-                            Trending
-                        </h3>
-
-                        <p>
-                            New launches, sales, price changes and
-                            technology topics.
-                        </p>
-
-                        <span class="read-more">
-                            Explore →
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <a href="about.html"
-                   class="quick-link">
-
-                    <div class="category-card">
-
-                        <div class="category-icon">
-                            💡
-                        </div>
-
-                        <h3>
-                            About TechWorth
-                        </h3>
-
-                        <p>
-                            Learn what TechWorth is about and how
-                            we approach technology advice.
-                        </p>
-
-                        <span class="read-more">
-                            Learn more →
-                        </span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- WHY TECHWORTH -->
-
-    <section class="section section-alt">
-
-        <div class="container narrow-container">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    WHY TECHWORTH?
-                </span>
-
-                <h2>
-                    Because Specifications Aren't Everything
-                </h2>
-
-            </div>
-
-
-            <p>
-                A phone can have an impressive processor, a huge camera
-                number and a massive battery. That doesn't automatically
-                make it the right phone for you.
-            </p>
-
-            <p>
-                TechWorth focuses on the questions that matter before
-                you spend your money:
-            </p>
-
-
-            <ul>
-
-                <li>
-                    What will I actually use this phone for?
-                </li>
-
-                <li>
-                    Is the extra money buying something I need?
-                </li>
-
-                <li>
-                    How long can I realistically keep it?
-                </li>
-
-                <li>
-                    Is there a cheaper option that already does enough?
-                </li>
-
-                <li>
-                    What should I check before buying during a sale?
-                </li>
-
-            </ul>
-
-
-            <a href="about.html" class="btn">
-                Learn About TechWorth
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- NEWSLETTER -->
-
-    <section class="newsletter-section">
-
-        <div class="container">
-
-            <div class="newsletter-box">
-
-                <span class="section-label">
-                    TECHWORTH
-                </span>
-
-                <h2>
-                    Get Smarter Tech Advice
-                </h2>
-
-                <p>
-                    New smartphone guides, comparisons and practical
-                    technology articles.
-                </p>
-
-
-                <form class="newsletter-form">
-
-                    <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        required
-                    >
-
-                    <button type="submit" class="btn">
-                        Subscribe
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-
-        <div>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-container">
 
             <a href="index.html" class="logo">
                 Tech<span>Worth</span>
             </a>
 
-            <p>
-                Practical technology advice for smarter buying decisions.
-            </p>
+            <button class="menu-btn" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="phones.html">Phones</a>
+                <a href="buying-guides.html">Buying Guides</a>
+                <a href="trending.html">Trending</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        SMARTER TECH. BETTER DECISIONS.
+                    </p>
+
+                    <h1>
+                        Before You Buy,<br>
+                        Know What's Worth It.
+                    </h1>
+
+                    <p>
+                        Smartphone buying guides, comparisons, price advice
+                        and practical tech insights — without the unnecessary hype.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="phones.html" class="btn btn-primary">
+                            Explore Phone Guides
+                        </a>
+
+                        <a href="buying-guides.html" class="btn btn-secondary">
+                            View Buying Guides
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="phone-visual" aria-hidden="true">
+                    <div class="phone-screen">
+                        <span>📱</span>
+                        <strong>Worth It?</strong>
+                        <small>
+                            Compare the price.<br>
+                            Check the features.<br>
+                            Then decide.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Search -->
+        <section class="section">
+            <div class="container">
+
+                <form class="search-box">
+                    <span>🔎</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search smartphone guides..."
+                        aria-label="Search articles"
+                    >
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- Intro -->
+        <section class="section">
+            <div class="container">
+
+                <p class="home-intro">
+                    Buying a phone can get confusing quickly.
+                    TechWorth breaks down specifications, prices, features,
+                    alternatives and real-world trade-offs so you can understand
+                    what you're actually paying for.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Trending -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">WHAT PEOPLE ARE LOOKING AT</p>
+                        <h2>Trending Tech Guides</h2>
+                    </div>
+
+                    <a href="trending.html" class="text-link">
+                        View all →
+                    </a>
+                </div>
+
+
+                <div class="article-grid">
+
+                    <article class="article-card">
+
+                        <a href="article-iphone-2026.html">
+
+                            <div class="article-image">
+                                📱
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    SMARTPHONES
+                                </span>
+
+                                <h3>
+                                    Is Buying an iPhone Worth It in 2026?
+                                </h3>
+
+                                <p>
+                                    A practical look at the iPhone's price,
+                                    features and whether cheaper alternatives
+                                    make more sense for different buyers.
+                                </p>
+
+                                <span class="read-more">
+                                    Read guide →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="article-card">
+
+                        <a href="article-best-phones-40000.html">
+
+                            <div class="article-image">
+                                💰
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    BUYING GUIDE
+                                </span>
+
+                                <h3>
+                                    Best Phones Under ₹40,000 in India in 2026
+                                </h3>
+
+                                <p>
+                                    Explore what you can realistically expect
+                                    from smartphones around the ₹40K price range.
+                                </p>
+
+                                <span class="read-more">
+                                    Read guide →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="article-card">
+
+                        <a href="article-big-billion-days.html">
+
+                            <div class="article-image">
+                                🛍️
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    SALE GUIDE
+                                </span>
+
+                                <h3>
+                                    Big Billion Days 2026:
+                                    How to Get Better Smartphone Deals
+                                </h3>
+
+                                <p>
+                                    Understand bank offers, exchange deals,
+                                    seller checks and the real price you may pay.
+                                </p>
+
+                                <span class="read-more">
+                                    Read guide →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Featured Guides -->
+        <section class="section section-light">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PRACTICAL ADVICE</p>
+                        <h2>Featured Buying Guides</h2>
+                    </div>
+
+                    <a href="buying-guides.html" class="text-link">
+                        Explore guides →
+                    </a>
+                </div>
+
+
+                <div class="article-grid">
+
+                    <article class="article-card">
+
+                        <a href="article-iphone-vs-nord5.html">
+
+                            <div class="article-image">
+                                ⚖️
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    COMPARISON
+                                </span>
+
+                                <h3>
+                                    iPhone 16 vs OnePlus Nord 5:
+                                    Which Makes More Sense in 2026?
+                                </h3>
+
+                                <p>
+                                    Compare price, performance, cameras,
+                                    battery, software and everyday use.
+                                </p>
+
+                                <span class="read-more">
+                                    Compare phones →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="article-card">
+
+                        <a href="article-best-phones-30000.html">
+
+                            <div class="article-image">
+                                📱
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    BUYING GUIDE
+                                </span>
+
+                                <h3>
+                                    Best Phones Under ₹30,000 in India in 2026
+                                </h3>
+
+                                <p>
+                                    A practical guide to choosing a phone
+                                    without stretching your budget unnecessarily.
+                                </p>
+
+                                <span class="read-more">
+                                    Read guide →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="article-card">
+
+                        <a href="phones.html">
+
+                            <div class="article-image">
+                                🔍
+                            </div>
+
+                            <div class="article-content">
+
+                                <span class="article-category">
+                                    PHONE GUIDES
+                                </span>
+
+                                <h3>
+                                    Smartphone Guides
+                                </h3>
+
+                                <p>
+                                    Browse guides covering performance,
+                                    cameras, battery, displays and software.
+                                </p>
+
+                                <span class="read-more">
+                                    Explore phones →
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Categories -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <p class="eyebrow">EXPLORE TECHWORTH</p>
+                    <h2>Find What You Need</h2>
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a href="phones.html" class="category-card">
+
+                        <span class="category-icon">📱</span>
+
+                        <h3>Phones</h3>
+
+                        <p>
+                            Smartphone comparisons,
+                            features and buying advice.
+                        </p>
+
+                    </a>
+
+
+                    <a href="buying-guides.html" class="category-card">
+
+                        <span class="category-icon">🛒</span>
+
+                        <h3>Buying Guides</h3>
+
+                        <p>
+                            Practical advice for choosing
+                            the right tech for your budget.
+                        </p>
+
+                    </a>
+
+
+                    <a href="trending.html" class="category-card">
+
+                        <span class="category-icon">🔥</span>
+
+                        <h3>Trending</h3>
+
+                        <p>
+                            New launches, sales,
+                            price changes and tech topics.
+                        </p>
+
+                    </a>
+
+
+                    <a href="about.html" class="category-card">
+
+                        <span class="category-icon">💡</span>
+
+                        <h3>About TechWorth</h3>
+
+                        <p>
+                            Learn how TechWorth approaches
+                            technology and buying decisions.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Why TechWorth -->
+        <section class="section section-light">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <p class="eyebrow">WHY TECHWORTH?</p>
+                    <h2>Technology Should Be Easier to Understand</h2>
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            🔎
+                        </div>
+
+                        <h3>Look Beyond Specifications</h3>
+
+                        <p>
+                            A bigger number doesn't always mean a better
+                            experience. We focus on what features mean
+                            in everyday use.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            💰
+                        </div>
+
+                        <h3>Think About Value</h3>
+
+                        <p>
+                            A phone can be excellent and still be the wrong
+                            purchase if it doesn't fit your budget or needs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            ⚖️
+                        </div>
+
+                        <h3>Compare Before You Buy</h3>
+
+                        <p>
+                            Looking at alternatives can reveal features,
+                            compromises and savings that are easy to miss.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+
+                <div class="newsletter-content">
+
+                    <p class="eyebrow">
+                        STAY UPDATED
+                    </p>
+
+                    <h2>
+                        Get practical tech advice in your inbox.
+                    </h2>
+
+                    <p>
+                        New smartphone guides, comparisons and useful
+                        buying tips — without unnecessary noise.
+                    </p>
+
+                    <form class="newsletter-form">
+
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            aria-label="Email address"
+                            required
+                        >
+
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    Tech<span>Worth</span>
+                </a>
+
+                <p>
+                    Smart tech buying advice for people
+                    who want to spend their money wisely.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Explore</h4>
+
+                <a href="phones.html">Phones</a>
+                <a href="buying-guides.html">Buying Guides</a>
+                <a href="trending.html">Trending</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>TechWorth</h4>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+
+            </div>
 
         </div>
 
 
-        <div>
+        <div class="footer-bottom">
 
-            <h3>
-                Explore
-            </h3>
+            <div class="container">
 
-            <a href="phones.html">
-                Phones
-            </a>
+                <p>
+                    © <span class="current-year"></span> TechWorth.
+                    All rights reserved.
+                </p>
 
-            <a href="buying-guides.html">
-                Buying Guides
-            </a>
-
-            <a href="trending.html">
-                Trending
-            </a>
+            </div>
 
         </div>
 
-
-        <div>
-
-            <h3>
-                Information
-            </h3>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="privacy.html">
-                Privacy Policy
-            </a>
-
-        </div>
-
-    </div>
+    </footer>
 
 
-    <div class="footer-bottom">
-
-        <p>
-            © <span class="current-year"></span>
-            TechWorth. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
+    <a
+        href="#"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </a>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
